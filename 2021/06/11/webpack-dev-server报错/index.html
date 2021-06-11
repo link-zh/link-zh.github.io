@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>
-    Mac M1 flutter以及dart环境配置 |
+    webpack使用webpack-dev-server报错 |
     
     link</title>
   
@@ -30,7 +30,7 @@
 <body>
   <main class="content">
     <section class="outer">
-  <article id="post-My-New-Post" class="article article-type-post" itemscope
+  <article id="post-webpack-dev-server报错" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -39,7 +39,7 @@
       
 
 <h1 class="article-title" itemprop="name">
-    Mac M1 flutter以及dart环境配置
+    webpack使用webpack-dev-server报错
 </h1>
 
 
@@ -49,8 +49,8 @@
 
     
     <div class="article-meta">
-      <a href="/2021/05/24/My-New-Post/" class="article-date">
-  <time datetime="2021-05-24T02:50:08.000Z" itemprop="datePublished">2021-05-24</time>
+      <a href="/2021/06/11/webpack-dev-server%E6%8A%A5%E9%94%99/" class="article-date">
+  <time datetime="2021-06-11T02:05:26.000Z" itemprop="datePublished">2021-06-11</time>
 </a>
       
     </div>
@@ -58,50 +58,38 @@
 
     
     
+<div class="tocbot"></div>
+
     
 
     <div class="article-entry" itemprop="articleBody">
       
       
       
-      <ul>
-<li><p><strong>下载flutter SDK</strong></p>
-<ul>
-<li>  <strong>这是</strong><a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos#macos">下载地址</a></li>
-<li>  <strong>下载后解压到 /link/development/ 文件下 , link 是mac的用户名</strong></li>
-</ul>
-</li>
-<li><p>  <strong>下载 <code>Android Studio</code> 以及 <code>Andriod SDK</code></strong></p>
-</li>
-<li><p>  **下载 <code>Xcode</code> ****</p>
-</li>
-<li><p><strong>编辑环境变量</strong> ==主要是将flutter和dart修改为全局变量,方便开发==</p>
-<ul>
-<li><p>  <strong><code>vim ~/.bash_pofile</code></strong></p>
-</li>
-<li><p><strong>在 <code>.bash_pofile</code> 文件插入一下代码</strong></p>
+      <h4 id="webpack使用webpack-dev-server时报错"><a href="#webpack使用webpack-dev-server时报错" class="headerlink" title="webpack使用webpack-dev-server时报错"></a>webpack使用webpack-dev-server时报错</h4><p>配置如下：</p>
+<p>webpack.config.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">    contentBase: &#x27;./dist&#x27;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>Package.json</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;webpack-dev-server --open&quot;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>错误信息：<code>Cannot find module &#39;webpack/bin/config-yargs&#39;</code></p>
+<p>查看官方文档后，确定使用姿势正确，<strong>估计是版本的问题</strong>。</p>
+<p>后来在网上找到解决方案，如下：</p>
 <blockquote>
-<p>  名称根据自己的文件路径按需修改</p>
+<p>  NPM package.json scripts are a convenient and useful means to run locally installed binaries without having to be concerned about their full paths. Simply define a script as such:</p>
+<p>  For webpack-cli 3.x:</p>
+<p>  “scripts”: { “start:dev”: “webpack-dev-server” }</p>
+<p>  For webpack-cli 4.x:</p>
+<p>  “scripts”: { “start:dev”: “webpack serve” }</p>
 </blockquote>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PUB_HOSTED_URL=https://pub.flutter-io.cn</span><br><span class="line"><span class="built_in">export</span> FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn</span><br><span class="line"><span class="built_in">export</span> PATH=/Users/link/development/flutter/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">&quot;/Users/link/Library/Android/sdk&quot;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/tools</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/platform-tools</span><br></pre></td></tr></table></figure></li>
-<li><p><strong>输入 <code>source ~/.bash_profile</code> 更新环境变量</strong> </p>
-<blockquote>
-<p>  如果你终端是zsh，你还需要多一步</p>
-<p>  <strong><code>open ~/.zshrc</code></strong></p>
-<p>  在最下面添加这一行代码</p>
-<p>  <strong><code>source ~/.bash_profile</code></strong></p>
-</blockquote>
-</li>
-<li><p>  <strong>完成后输入 <code>which flutter</code> 查看结果 (flutter SDK 包含 dart)</strong></p>
-</li>
-</ul>
-</li>
-</ul>
+<p><img src="file:///Users/link/Library/Application%20Support/typora-user-images/image-20210611095147107.png?lastModify=1623377184" alt="image-20210611095147107"></p>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/40379139/cannot-find-module-webpack-bin-config-yargs">Cannot find module ‘webpack/bin/config-yargs’</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/05/24/My-New-Post/" data-id="ckproxxav0000sl7l0vtba2od" class="article-share-link">
+      <a data-url="http://example.com/2021/06/11/webpack-dev-server%E6%8A%A5%E9%94%99/" data-id="ckproxxay0001sl7lfeqfash2" class="article-share-link">
         分享
       </a>
       
@@ -113,15 +101,11 @@
   
 <nav class="article-nav">
   
-  <a href="/2021/06/03/flutter-using-xx-svg/" class="article-nav-link">
-    <strong class="article-nav-caption">前一篇</strong>
-    <div class="article-nav-title">
-      
-      flutter using xx.svg
-      
-    </div>
-  </a>
   
+  <a href="/2021/06/03/flutter-using-xx-svg/" class="article-nav-link">
+    <strong class="article-nav-caption">后一篇</strong>
+    <div class="article-nav-title">flutter using xx.svg</div>
+  </a>
   
 </nav>
 
