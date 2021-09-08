@@ -149,39 +149,26 @@
         </header>
 
         <div class="post-content">
-            <ul>
-<li><p>下载flutter SDK</p>
-<ul>
-<li>  这是<a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos#macos">下载地址</a></li>
-<li>  下载后解压到 /link/development/ 文件下 , link 是mac的用户名</li>
-</ul>
-</li>
-<li><p>  下载 <code>Android Studio</code> 以及 <code>Andriod SDK</code></p>
-</li>
-<li><p>  下载 <code>Xcode</code> </p>
-</li>
-<li><p>编辑环境变量主要是将flutter和dart修改为全局变量,方便开发</p>
-<ul>
-<li><p>  <code>vim ~/.bash_pofile</code></p>
-</li>
-<li><p>在 <code>.bash_pofile</code> 文件插入一下代码</p>
+            <p>首先下载 flutter SDK <a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/tools/sdk/releases?tab=macos#macos">下载地址</a></p>
+<p>下载后解压到 /link/development/ 文件下 , link 是 mac 的用户名</p>
+<p>下载 <code>Android Studio</code> 以及 <code>Andriod SDK</code></p>
+<p>下载 <code>Xcode</code> </p>
+<p>编辑环境变量 主要是将flutter和dart修改为全局变量,方便开发</p>
+<p><code>vim ~/.bash_profile</code></p>
+<p>在 <code>.bash_profile</code> 文件插入一下代码</p>
 <blockquote>
 <p>  名称根据自己的文件路径按需修改</p>
 </blockquote>
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PUB_HOSTED_URL=https://pub.flutter-io.cn</span><br><span class="line"><span class="built_in">export</span> FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn</span><br><span class="line"><span class="built_in">export</span> PATH=/Users/link/development/flutter/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">&quot;/Users/link/Library/Android/sdk&quot;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/tools</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/platform-tools</span><br></pre></td></tr></table></figure></li>
-<li><p>输入 <code>source ~/.bash_profile</code> 更新环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PUB_HOSTED_URL=https://pub.flutter-io.cn</span><br><span class="line"><span class="built_in">export</span> FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn</span><br><span class="line"><span class="built_in">export</span> PATH=/Users/link/development/flutter/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> ANDROID_HOME=<span class="string">&quot;/Users/link/Library/Android/sdk&quot;</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/tools</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;PATH&#125;</span>:<span class="variable">$&#123;ANDROID_HOME&#125;</span>/platform-tools</span><br></pre></td></tr></table></figure>
+
+<p>输入 <code>source ~/.bash_profile</code> 更新环境变量</p>
 <blockquote>
 <p>  如果你终端是zsh，你还需要多一步</p>
-<p>  <code>open ~/.zshrc</code></p>
+<p>  <strong><code>open ~/.zshrc</code></strong></p>
 <p>  在最下面添加这一行代码</p>
-<p>  <code>source ~/.bash_profile</code></p>
+<p>  <strong><code>source ~/.bash_profile</code></strong></p>
 </blockquote>
-</li>
-<li><p>  完成后输入 <code>which flutter</code> 查看结果 (flutter SDK 包含 dart)</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>完成后输入 <code>which flutter</code> 查看结果 (flutter SDK 包含 dart)</p>
 
         </div>
 
@@ -209,6 +196,10 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/flutter/"># flutter</a>
+                    
+                        
                 </span>
             </div>
             <div>
