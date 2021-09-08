@@ -13,7 +13,7 @@
 
 
 
-<title>webpack使用webpack-dev-server报错 | link</title>
+<title>苹果开发者账号分为 个人(individual)，公司(company)，企业(enterprise)三种类型。 | link</title>
 
 
 
@@ -127,73 +127,11 @@
                 <div class="container">
     
     
-        <div class="post-toc">
-    <div class="tocbot-list">
-    </div>
-    <div class="tocbot-list-menu">
-        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
-        <a onclick="go_top()">Back to top</a>
-        <a onclick="go_bottom()">Go to bottom</a>
-    </div>
-</div>
-
-<script>
-    document.ready(
-        function () {
-            tocbot.init({
-                tocSelector: '.tocbot-list',
-                contentSelector: '.post-content',
-                headingSelector: 'h1, h2, h3, h4, h5',
-                collapseDepth: 1,
-                orderedList: false,
-                scrollSmooth: true,
-            })
-        }
-    )
-
-    function expand_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 6,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "collapse_toc()");
-        b.innerHTML = "Collapse all"
-    }
-
-    function collapse_toc() {
-        var b = document.querySelector(".tocbot-toc-expand");
-        tocbot.init({
-            tocSelector: '.tocbot-list',
-            contentSelector: '.post-content',
-            headingSelector: 'h1, h2, h3, h4, h5',
-            collapseDepth: 1,
-            orderedList: false,
-            scrollSmooth: true,
-        });
-        b.setAttribute("onclick", "expand_toc()");
-        b.innerHTML = "Expand all"
-    }
-
-    function go_top() {
-        window.scrollTo(0, 0);
-    }
-
-    function go_bottom() {
-        window.scrollTo(0, document.body.scrollHeight);
-    }
-
-</script>
-    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">webpack使用webpack-dev-server报错</h1>
+            <h1 class="post-title">苹果开发者账号分为 个人(individual)，公司(company)，企业(enterprise)三种类型。</h1>
             
                 <div class="post-meta">
                     
@@ -202,7 +140,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">六月 11, 2021&nbsp;&nbsp;10:05:26</a>
+                        Date: <a href="#">五月 7, 2021&nbsp;&nbsp;15:19:46</a>
                         </span>
                     
                     
@@ -211,25 +149,21 @@
         </header>
 
         <div class="post-content">
-            <h4 id="webpack使用webpack-dev-server时报错"><a href="#webpack使用webpack-dev-server时报错" class="headerlink" title="webpack使用webpack-dev-server时报错"></a>webpack使用webpack-dev-server时报错</h4><p>配置如下：</p>
-<p>webpack.config.js</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">    contentBase: &#x27;./dist&#x27;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>Package.json</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;webpack-dev-server --open&quot;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
-
-<p>错误信息：<code>Cannot find module &#39;webpack/bin/config-yargs&#39;</code></p>
-<p>查看官方文档后，确定使用姿势正确，<strong>估计是版本的问题</strong>。</p>
-<p>后来在网上找到解决方案，如下：</p>
-<blockquote>
-<p>  NPM package.json scripts are a convenient and useful means to run locally installed binaries without having to be concerned about their full paths. Simply define a script as such:</p>
-<p>  For webpack-cli 3.x:</p>
-<p>  “scripts”: { “start:dev”: “webpack-dev-server” }</p>
-<p>  For webpack-cli 4.x:</p>
-<p>  “scripts”: { “start:dev”: “webpack serve” }</p>
+            <blockquote>
+<p>  <strong>个人开发者账号（苹果公司会收取年费）</strong></p>
 </blockquote>
-<p><img src="/image/image-20210611095147107.png" alt="image-20210611095147107"></p>
-<p>原文地址：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/40379139/cannot-find-module-webpack-bin-config-yargs">Cannot find module ‘webpack/bin/config-yargs’</a></p>
+<p>优点：申请速度快（最快1天申请完成，最慢2-3个工作日），可以上架至AppStore供全世界的人下载.可以申请100台iOS设备（iphone/ipad/ipod).</p>
+<p>缺点：上架至AppStore需要经过Apple审核，在iTunes里查到的信息只能是个人注册信息。如果是公司或企业的话就起不到宣传作用。无法创建团队、添加团队成员至开发者账号，有设备数量限制。</p>
+<blockquote>
+<p>  <strong>公司开发者账号（苹果公司会收取年费）</strong></p>
+</blockquote>
+<p>优点：可以上架到AppStore，供全世界的 人下载，iTunes里可以查到公司信息及相关产品，宣传效果不错。可以绑定100个iOS测试QA设备（iphone/ipad/ipod）。可以创建属于您自已的开发团队，并添加成员至此账号中，开发人员可以集中管理。申请成功后，公司可获得邓白氏编码，相当于您企业的一张英文名片！</p>
+<p>缺点：上架需要经过苹果公司的审核，申请时间较个人有所延长，需要最快只2-4个工作日，最慢一般5-8个工作日保证完成。有Adhoc测试（QA测试模式）设备数量限制。注册时需要邓白氏编码 .</p>
+<blockquote>
+<p>  <strong>企业开发者（苹果公司会收取年费）</strong></p>
+</blockquote>
+<p>优点：针对企业用户，==开发的app可以不经过苹果公司的审核，直接上架到企业网站==（不能上架到Appstore），适合大型团队敏捷团队开发，迭代版本快。无设备限制，可以创建属于您自已的开发团队，并添加成员至此账号中，开发人员可以集中管理。申请成功后，企业可获得邓白氏编码，相当于您企业的一张英文名片！</p>
+<p>缺点：申请时间和公司开发者账号一样长，也需要邓白氏编码 在iTunes store里查不到企业的app信息和企业信息,适合企业内部使用 .</p>
 
         </div>
 
@@ -258,7 +192,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/webpack/"># webpack</a>
+                        <a href="/tags/%E5%A5%87%E6%80%AA%E7%9A%84%E7%9F%A5%E8%AF%86/"># 奇怪的知识</a>
                     
                         
                 </span>
@@ -271,10 +205,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2021/09/07/retrieveMysqlPwd/">从navicat中查看已保存密码</a>
+                <a class="prev" rel="prev" href="/2021/05/24/My-New-Post/">Mac M1 flutter以及dart环境配置</a>
             
-            
-            <a class="next" rel="next" href="/2021/06/03/flutter-using-xx-svg/">flutter using xx.svg</a>
             
         </section>
 
